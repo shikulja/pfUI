@@ -81,7 +81,9 @@ pfUI:RegisterSkin("Decursive", "vanilla", function()
                 CreateBackdrop(listItem)
                 CreateBackdropShadow(listItem)
                 listItem:ClearAllPoints()
-                listItem:SetPoint("TOPLEFT", "DecursiveMainBar", "BOTTOMLEFT", 0, -3)
+                if i == 1 then listItem:SetPoint("TOPLEFT", "DecursiveMainBar", "BOTTOMLEFT", 0, -3)
+                else listItem:SetPoint("TOPLEFT", "DecursiveAfflictedListFrame" .. "ListItem" .. i - 1, "BOTTOMLEFT", 0, -3)
+                end
             end
         end
 
